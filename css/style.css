@@ -2543,10 +2543,8 @@ body.background-white .tf-mouse-outer {
 }
 
 #logo_header {
-  width: 80px;
+  width: 130px;
   height: auto; /* Mantiene la proporción */
-  max-width: 80px;
-  min-width: 80px;
   object-fit: contain;
   display: block;
 }
