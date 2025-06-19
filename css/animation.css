@@ -150,7 +150,7 @@
     }
     50% {
         transform: scaleY(1);
-        background: #DDF247;
+        background: #E10600;
     }
     100% {
         transform: scaleY(0.1);

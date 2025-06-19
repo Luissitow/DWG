@@ -1,3 +1,5 @@
+
+
 /**
   * Name: Open9 | NFT Marketplace HTML Template
   * Version: 1.0.1
@@ -723,7 +725,7 @@ input[type="submit"] {
     font-weight       : 700;
     font-size         : 14px;
     line-height       : 22px;
-    background-color  : rgba(221, 242, 71, 1);
+    background-color  : rgb(242, 71, 71);
     color             : rgba(22, 22, 22, 1);
     border-radius     : 14px;
     padding           : 10px;
@@ -1036,7 +1038,7 @@ label.error {
     margin-bottom: 30px;
 }
 .tf-color {
-    color: #DDF247 !important;
+    color: #E10600 !important;
 }
 .divider {
     width: 100%;
@@ -1087,7 +1089,7 @@ a {
 
 a:hover,
 a:focus {
-    color             : #DDF247;
+    color             : #E10600;
     text-decoration   : none;
     outline           : 0;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1321,7 +1323,7 @@ a:focus {
 
 #main-nav .sub-menu li.current-item > a,
 #main-nav .sub-menu li a:hover {
-    color: #DDF247;
+    color: #E10600;
 }
 
 #main-nav>ul>li .sub-menu li {
@@ -1379,7 +1381,7 @@ a:focus {
 }
 
 .header_1.style-white .tf-button:hover {
-    background-color: #DDF247;
+    background-color: #E10600;
 }
 
 .header_1.style-white #main-nav>ul>li>a {
@@ -1440,7 +1442,7 @@ a:focus {
 }
 
 .header_1.header-full #wallet-header a:hover {
-    background: #DDF247;
+    background: #E10600;
 }
 
 /* Mobile Menu Button */
@@ -1548,7 +1550,7 @@ a:focus {
 }
 
 .widget-menu ul li a:hover {
-    color: #DDF247;
+    color: #E10600;
 }
 
 .background-white .widget-menu ul li a:after {
@@ -1560,7 +1562,7 @@ a:focus {
     width             : 0;
     height            : 1px;
     position          : absolute;
-    background        : #DDF247;
+    background        : #E10600;
     left              : 50%;
     bottom            : 0;
     transform         : translateX(-50%);
@@ -1666,7 +1668,7 @@ a:focus {
 }
 
 .footer-bottom ul li a:hover {
-    color: #DDF247;
+    color: #E10600;
 }
 
 /* style-1 */
@@ -1830,7 +1832,7 @@ a:focus {
 }
 
 .tf-button.style-1.type-1:hover {
-    background-color: #DDF247;
+    background-color: #E10600;
     color: #161616;
 }
 
@@ -1887,7 +1889,7 @@ a:focus {
 .section-menu-left .list-menu > ul > li > a:hover {
     box-shadow: 0px 4px 20px 0px rgba(221, 242, 71, 0.30);
     color: #161616;
-    background: #DDF247;
+    background: #E10600;
 }
 
 .section-menu-left .list-menu > ul > li.has-item > a::before {
@@ -1962,10 +1964,10 @@ a:focus {
 }
 
 .section-menu-left .list-menu ul.sub-item li:hover::before {
-    background-color: #DDF247;
+    background-color: #E10600;
 }
 .section-menu-left .list-menu ul.sub-item li:hover a {
-    color: #DDF247;
+    color: #E10600;
 }
 
 .section-menu-left .language ul.sub-item {
@@ -2025,7 +2027,7 @@ a:focus {
 
 .section-menu-left .create a.tf-button.active {
     color: #161616;
-    background-color: #DDF247;
+    background-color: #E10600;
 }
 
 .section-menu-left .content h6 {
@@ -2066,7 +2068,7 @@ a:focus {
     content: "";
     top: 50%;
     left: 0;
-    background-color: #DDF247;
+    background-color: #E10600;
     border-radius: 999px;
     transform: translate(-50%, -50%);
     -webkit-transition: all 0.3s ease;
@@ -2084,7 +2086,7 @@ a:focus {
 
 .section-menu-left ul.menu-tab li.active,
 .section-menu-left ul.menu-tab li:hover {
-    color: #DDF247;
+    color: #E10600;
 }
 
 .section-menu-left ul.menu-tab li svg {
@@ -2282,7 +2284,7 @@ a:focus {
 #menu-mobile-menu li.current-menu-item > a ,
 #menu-mobile-menu li a:hover ,
 #menu-mobile-menu li.current-item a {
-    color: #DDF247;
+    color: #E10600;
 }
 
 #menu-mobile-menu li.menu-item-has-children-mobile > a::after {
@@ -2440,7 +2442,7 @@ animation-delay: 0.8s;
     line-height: 44px;
     font-size: 16px;
     font-weight: 900;
-    color: #DDF247;
+    color: #E10600;
     left: 0;
     top: 0;
     height: 44px;
@@ -2467,7 +2469,7 @@ animation-delay: 0.8s;
   
 .progress-wrap svg.progress-circle path {
     box-sizing: border-box;
-    stroke: #DDF247;
+    stroke: #E10600;
     stroke-width: 5;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2496,7 +2498,7 @@ animation-delay: 0.8s;
     width: 8px;
     height: 8px;
     z-index: 10000;
-    background-color: #DDF247;
+    background-color: #E10600;
     -webkit-transition: width .5s ease-in-out, height .5s ease-in-out, margin .5s ease-in-out, opacity .5s ease-in-out;
     transition: width .5s ease-in-out, height .5s ease-in-out, margin .5s ease-in-out, opacity .5s ease-in-out
 }
@@ -2506,7 +2508,7 @@ animation-delay: 0.8s;
     margin-top: -40px;
     width: 80px;
     height: 80px;
-    background-color: #DDF247;
+    background-color: #E10600;
     opacity: .3
 }
 
@@ -2515,7 +2517,7 @@ animation-delay: 0.8s;
     margin-top: -22px;
     width: 40px;
     height: 40px;
-    border: 2px solid #DDF247;
+    border: 2px solid #E10600;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 10000;
@@ -2666,4 +2668,22 @@ body.background-white .tf-mouse-outer {
   .hero-texto p {
     font-size: 14px;
   }
+}
+
+
+
+/* Estilo para hacer más delgadas las tarjetas del carrusel de servicios */
+.swiper-container.carousel .swiper-slide {
+    width: 240px !important;
+    max-width: 80vw;
+}
+/* Estilo para que las partículas cubran toda la pantalla */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
