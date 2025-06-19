@@ -2591,103 +2591,7 @@ body.background-white .tf-mouse-outer {
 }
 
 
-
-
-/* Contenedor principal que agrupa logo + texto */
-.hero-stack {
-  position: relative;               /* Para que los hijos con position: absolute se ubiquen respecto a este */
-  text-align: center;               /* Centra el contenido horizontalmente */
-  padding: 160px 20px 100px;        /* Padding general: top - sides - bottom */
-  overflow: hidden;                 /* Oculta cualquier parte del logo que se salga */
-}
-
-/* Imagen del logo grande que va de fondo */
-.hero-logo {
-  position: absolute;
-  top: 50%;                         /* Centrado vertical */
-  left: 50%;                        /* Centrado horizontal */
-  transform: translate(-50%, -50%);/* Truco para centrar completamente */
-  width: 900px;                     /* Tamaño del logo */
-  max-width: none;
-  /* opacity: 0.1; */               /* Si lo quieres tenue, descomenta esto */
-  z-index: 1;                       /* Detrás del texto */
-  pointer-events: none;
-}
-
-/* Contenedor del texto */
-.hero-texto {
-  position: relative;
-  z-index: 2;                       /* Asegura que esté sobre el logo */
-  color: white;
-}
-
-/* Estilo del título "DWG PLASTIDIP" */
-.titulo-principal {
-  font-size: 90px;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-}
-
-/* Estilo del subtítulo */
-.hero-texto p {
-  font-size: 22px;
-  color: #bbbbbb;
-}
-
-/* --- RESPONSIVE: para pantallas medianas como tablets --- */
-@media (max-width: 1024px) {
-  .hero-logo {
-    width: 800px;
-  }
-
-  .titulo-principal {
-    font-size: 56px;
-  }
-
-  .hero-texto p {
-    font-size: 16px;
-  }
-}
-
-/* --- RESPONSIVE: para pantallas pequeñas como celulares --- */
-@media (max-width: 600px) {
-  .hero-stack {
-    padding: 80px 10px 40px;       /* Más espacio arriba para evitar colisión */
-  }
-
-  .hero-logo {
-    width: 470px;                  /* Más pequeño */
-    top: 30%;                      /* Lo subimos más para dejar espacio al texto */
-  }
-
-  .titulo-principal {
-    font-size: 30px;
-    margin-top: 0px;               /* Ya no necesita margen negativo */
-  }
-
-  .hero-texto p {
-    font-size: 14px;
-  }
-}
-
-
-
-/* Estilo para hacer más delgadas las tarjetas del carrusel de servicios */
-.swiper-container.carousel .swiper-slide {
-    width: 240px !important;
-    max-width: 80vw;
-}
-/* Estilo para que las partículas cubran toda la pantalla */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-}
-
+/* 1. Importar la fuente Ethnocentric */
 @font-face {
   font-family: 'Ethnocentric';
   src: url('/fonts/ethnocentric.woff') format('woff');
@@ -2695,7 +2599,111 @@ body.background-white .tf-mouse-outer {
   font-style: normal;
 }
 
-.titulo-principal1,
+/* 2. Contenedor general del logo + texto */
+.hero-stack {
+  position: relative;                    /* Para que los textos se ubiquen encima del logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 420px;                         /* Altura en PC */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 3. Imagen del logo SVG */
+.hero-logo {
+  width: 100%;
+  max-width: 1100px;                    /* Tamaño máximo del logo */
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 4. Contenedor de texto */
+.hero-texto {
+  position: absolute;
+  top: 64%;                             /* Posición vertical ajustada */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* 5. Título principal */
+.titulo-principal1 {
+  font-family: 'Ethnocentric', sans-serif;
+  font-size: 7rem;                      /* Tamaño grande en PC */
+  margin: 0;
+  line-height: 1;
+  color: white;
+  white-space: nowrap;                 /* Evita que se parta el texto */
+}
+
+/* 6. Subtítulo */
 .subtexto-dwg {
   font-family: 'Ethnocentric', sans-serif;
+  font-size: 2.6rem;
+  margin-top: 0.2rem;
+  color: white;
+  max-width: 900px;
+  white-space: nowrap;                 /* Mantener en una sola línea */
+  overflow: hidden;
+}
+
+/* 7. Responsive para Tablets */
+@media (max-width: 1024px) {
+  .hero-stack {
+    height: 360px;                     /* Menor altura */
+  }
+
+  .hero-logo {
+    max-width: 900px;                 /* Logo más pequeño */
+  }
+
+  .titulo-principal1 {
+    font-size: 5rem;                  /* Texto proporcional */
+  }
+
+  .subtexto-dwg {
+    font-size: 1.6rem;
+    max-width: 90%;
+  }
+
+  .hero-texto {
+    top: 66%;                         /* Baja un poco el texto */
+  }
+}
+
+/* 8. Responsive para Celulares */
+@media (max-width: 768px) {
+  .hero-stack {
+    height: 300px;
+  }
+
+  .hero-logo {
+    max-width: 600px;
+  }
+
+  .titulo-principal1 {
+    font-size: 3rem;
+  }
+
+  .subtexto-dwg {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    max-width: 95%;
+    white-space: normal;              /* Permitir que el texto se divida si no cabe */
+    text-wrap: balance;
+  }
+
+  .hero-texto {
+    top: 67%;
+  }
 }
