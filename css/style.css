@@ -2687,3 +2687,15 @@ body.background-white .tf-mouse-outer {
   z-index: -1;
   pointer-events: none;
 }
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('/fonts/ethnocentric.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.titulo-principal1,
+.subtexto-dwg {
+  font-family: 'Ethnocentric', sans-serif;
+}
