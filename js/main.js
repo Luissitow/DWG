@@ -635,3 +635,32 @@
 
 
 
+
+// Abrir modal desde imagen
+document.querySelectorAll('.img-proyecto').forEach(img => {
+  img.addEventListener('click', () => {
+    const modal = document.getElementById('modal-proyecto');
+    const imgs = JSON.parse(img.dataset.imgs || '[]');
+    const gallery = modal.querySelector('.modal-gallery');
+    
+    // Limpiar galería
+    gallery.innerHTML = '';
+
+    // Insertar todas las imágenes
+    imgs.forEach(src => {
+      const imgElement = document.createElement('img');
+      imgElement.src = src;
+      gallery.appendChild(imgElement);
+    });
+
+    document.getElementById('modal-titulo').textContent = img.dataset.titulo;
+    document.getElementById('modal-descripcion').textContent = img.dataset.descripcion;
+
+    modal.style.display = 'block';
+  });
+});
+
+// Cerrar modal
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.getElementById('modal-proyecto').style.display = 'none';
+});

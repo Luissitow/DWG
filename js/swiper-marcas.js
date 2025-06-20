@@ -1,23 +1,11 @@
 var swiper = new Swiper(".marcasSwiper", {
   loop: true,
   slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 20,
-  freeMode: {
-    enabled: true,
-    sticky: true,
-  },
-  speed: 3000,
+  allowTouchMove: false,
+  centeredSlides: false,
+  speed: 5000, // velocidad más lenta para desplazamiento continuo
   autoplay: {
-    delay: 0,
+    delay: 1, // casi inmediato
     disableOnInteraction: false,
-  },
-  effect: "coverflow",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 150,
-    modifier: 2,
-    slideShadows: false,
   },
 });

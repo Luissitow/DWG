@@ -2589,24 +2589,23 @@ body.background-white .tf-mouse-outer {
   top: 0;
   left: 0;
 }
-
-
-/* 1. Importar la fuente Ethnocentric */
+/* tipografía*/
+/* 1. Importar la fuente NHL Ducks */
 @font-face {
-  font-family: 'Ethnocentric';
-  src: url('/fonts/ethnocentric.woff') format('woff');
+  font-family: 'NHL Ducks';
+  src: url('/fonts/NHL Ducks.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 /* 2. Contenedor general del logo + texto */
 .hero-stack {
-  position: relative;                    /* Para que los textos se ubiquen encima del logo */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 420px;                         /* Altura en PC */
+  height: 420px;
   padding: 0;
   overflow: hidden;
 }
@@ -2614,7 +2613,7 @@ body.background-white .tf-mouse-outer {
 /* 3. Imagen del logo SVG */
 .hero-logo {
   width: 100%;
-  max-width: 1100px;                    /* Tamaño máximo del logo */
+  max-width: 1100px;
   height: auto;
   pointer-events: none;
   z-index: 1;
@@ -2623,7 +2622,7 @@ body.background-white .tf-mouse-outer {
 /* 4. Contenedor de texto */
 .hero-texto {
   position: absolute;
-  top: 64%;                             /* Posición vertical ajustada */
+  top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -2636,48 +2635,41 @@ body.background-white .tf-mouse-outer {
   text-align: center;
 }
 
-/* 5. Título principal */
+/* 5. Título principal con clamp() */
 .titulo-principal1 {
-  font-family: 'Ethnocentric', sans-serif;
-  font-size: 7rem;                      /* Tamaño grande en PC */
+  font-family: 'NHL Ducks', sans-serif;
+  font-size: clamp(3rem, 8vw, 10.2rem);
   margin: 0;
   line-height: 1;
   color: white;
-  white-space: nowrap;                 /* Evita que se parta el texto */
+  white-space: nowrap;
+  text-align: center;
 }
 
-/* 6. Subtítulo */
+/* 6. Subtítulo con clamp() */
 .subtexto-dwg {
-  font-family: 'Ethnocentric', sans-serif;
-  font-size: 2.6rem;
+  font-family: 'NHL Ducks', sans-serif;
+  font-size: clamp(1.2rem, 3.5vw, 4rem);
   margin-top: 0.2rem;
   color: white;
-  max-width: 900px;
-  white-space: nowrap;                 /* Mantener en una sola línea */
+  max-width: 95%;
+  white-space: normal;
   overflow: hidden;
+  text-align: center;
 }
 
 /* 7. Responsive para Tablets */
 @media (max-width: 1024px) {
   .hero-stack {
-    height: 360px;                     /* Menor altura */
+    height: 360px;
   }
 
   .hero-logo {
-    max-width: 900px;                 /* Logo más pequeño */
-  }
-
-  .titulo-principal1 {
-    font-size: 5rem;                  /* Texto proporcional */
-  }
-
-  .subtexto-dwg {
-    font-size: 1.6rem;
-    max-width: 90%;
+    max-width: 900px;
   }
 
   .hero-texto {
-    top: 66%;                         /* Baja un poco el texto */
+    top: 66%;
   }
 }
 
@@ -2691,15 +2683,8 @@ body.background-white .tf-mouse-outer {
     max-width: 600px;
   }
 
-  .titulo-principal1 {
-    font-size: 3rem;
-  }
-
   .subtexto-dwg {
-    font-size: 1rem;
     padding: 0 0.5rem;
-    max-width: 95%;
-    white-space: normal;              /* Permitir que el texto se divida si no cabe */
     text-wrap: balance;
   }
 
@@ -2708,39 +2693,54 @@ body.background-white .tf-mouse-outer {
   }
 }
 
+@media (max-width: 480px) {
+  .titulo-principal1 {
+    font-size: 4.5rem; /* Más grande que lo que da clamp en pantallas pequeñas */
+  }
+
+  .subtexto-dwg {
+    font-size: 2rem; /* Aumenta también el subtítulo */
+  }
+}
+
+
+
 .marcas-section {
   padding: 4rem 0;
   background: #0a0a0a;
-  display: flex;
-  justify-content: center;
+  overflow: hidden; /* ✨ Oculta scroll lateral */
 }
 
 .marcasSwiper {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
+.marcasSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
 .marcasSwiper .swiper-slide {
+  width: auto; /* ✨ Importante: para mostrar imágenes seguidas */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  box-shadow: none;
+  transition: none;
 }
 
 .marcasSwiper .swiper-slide img {
   max-height: 80px;
-  max-width: 160px;
   object-fit: contain;
-  padding: 1rem;
+  padding: 0 2rem; /* opcional: espacio entre logos */
 }
 
 
+
 .titulo-centrado-ethno {
-  font-family: 'Ethnocentric', sans-serif;
+  font-family: 'NHL Ducks', sans-serif;
   font-size: 2.8rem;
   text-align: center;
   color: white;
@@ -2757,3 +2757,96 @@ body.background-white .tf-mouse-outer {
     padding: 0 1rem;
   }
 }
+
+
+
+.modal-proyecto {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+}
+
+.modal-content {
+  margin: 40px auto;
+  background: #111;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 95%;
+  width: 1100px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.modal-img {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.modal-info {
+  flex: 1;
+  color: #fff;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* RESPONSIVE MOBILE: cambia a scroll vertical */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .modal-img {
+    max-width: 100%;
+  }
+
+  .modal-gallery {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .modal-info {
+    max-height: none;
+    padding-right: 0;
+  }
+
+  .modal-content {
+    margin: 20px auto;
+    padding: 20px;
+  }
+}
+
+
